@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xumeng2019210965 7th-2</title>
+</head>
+<body>
+    <button id="submit">发送一个请求</button>
+    <script>
+        let button = document.getElementById('submit')
+        button.addEventListener('click',() => {
+        fetch('http://39.107.142.107:3000/mock/25/getText')
+        .then(function (response){
+        return response.json()
+        })
+        .then(function(myJson){
+        console.log(myJson)
+        });
+        })
+
+        // let msg = {
+        //     name: '许萌',
+        //     id: 2019210965
+        // }
+        // let button = document.getElementById("submit")
+        // button.addEventListener('click', () => {
+        //     fetch('http://39.107.142.107:3000/mock/25/testPost', {
+        //         method: 'POST',
+        //         body: JSON.stringify(msg),
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         }
+        //     })
+        //         .then(function (response) {
+        //             return response.json()
+        //         })
+        //         .then(function (myJson) {
+        //             console.log(myJson)
+        //         })
+        // })
+    </script>
+</body>
+</html>
